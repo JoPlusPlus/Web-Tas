@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <nav>
+            <div class="siteName">Reading With Us</div>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Fatma.html">AllBooks</a></li>
+                <li><a href="Fatma.html">Admin</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </nav>
+        <form onsubmit="SaveUser(event)">
+            <div class="signupContainer">
+                <h2>Sign Up</h2>
+                <label for="name">Fullname</label><br>
+                <input type="text" id="name" class="form" required><br>
+
+                <label for="email">Email</label><br>
+                <input type="email" id="email" class="form" required><br>
+
+                <label for="pass">Password</label><br>
+                <input type="password" id="pass" class="form" required><br>
+
+                <input type="submit" value="Create Account" id="Submit">
+
+                <div id="login-div">
+                    <p>Already have an account?</p>
+                    <a href="Login.html" id="login" target="_blank">Login</a>
+                </div>
+            </div>
+        </form>
+        <script src="signup.js"></script>
+        
+    </body>
+</html>

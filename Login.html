@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reading with us</title>
+
+    <style>
+
+        h1 {
+            text-align: center;
+            flex-grow: 1;
+            background-color: burlywood;
+            color: aliceblue;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 8px 30px;
+            background-color: burlywood;
+        }
+
+        body {
+            background-image: url("book4.jpeg.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        input {
+            padding: 7px;
+            margin: 8px;
+        }
+
+        input[type=button] {
+            width: auto;
+            background-color: darkcyan;
+            color: white;
+            padding: 6px 15px;
+            margin: 8px 5px;
+            border: 1px solid black;
+        }
+
+        .login {
+            background-color: rgba(255,255,255,0.9);
+            width: 350px;
+            margin: 70px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <article>
+
+        <header>
+
+            <h1>Reading with us</h1>
+
+            <input type="button" value="Home"
+                   onclick="location.href='Home.html'">
+
+            <input type="button" value="All books"
+                   onclick="location.href=''">
+
+            <input type="button" value="Admin"
+                   onclick="location.href=''">
+
+            <input type="button" value="Login"
+                   onclick="location.href=''">
+
+        </header>
+
+
+        <div class="login">
+
+            <h2 id="title">Login</h2>
+
+            <label>Email</label>
+
+            <input type="text"
+                   id="email"
+                   placeholder="Enter your name">
+
+
+            <label>Password</label>
+
+            <input type="password"
+                   id="password"
+                   placeholder="Enter your password">
+
+            <br>
+
+            <input type="button"
+                   value="Confirm"
+                   onclick="login()">
+
+            <input type="button"
+                   value="Sign Up"
+                   onclick="location.href='signup.html'">
+
+        </div>
+
+
+    </article>
+
+    
+    <script src="login.js"></script>
+
+</body>
+</html>
