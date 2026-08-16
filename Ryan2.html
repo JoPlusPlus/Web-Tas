@@ -59,15 +59,6 @@
             margin-top: 10px;
         }
 
-        #success {
-            display: none;
-            background-color: white;
-            width: 350px;
-            margin: 20px auto;
-            padding: 25px;
-            text-align: center;
-        }
-
     </style>
 
 </head>
@@ -82,16 +73,16 @@
             <h1>Reading with us</h1>
 
             <input type="button" value="Home"
-                   onclick="location.href='page2.html'">
+                   onclick="location.href='Fatma.html'">
 
             <input type="button" value="All books"
-                   onclick="location.href='page2.html'">
+                   onclick="location.href=''">
 
             <input type="button" value="Admin"
-                   onclick="location.href='page2.html'">
+                   onclick="location.href=''">
 
             <input type="button" value="Login"
-                   onclick="location.href='page2.html'">
+                   onclick="location.href=''">
 
         </header>
 
@@ -100,10 +91,10 @@
 
             <h2 id="title">Login</h2>
 
-            <label>Name</label>
+            <label>Email</label>
 
             <input type="text"
-                   id="name"
+                   id="email"
                    placeholder="Enter your name">
 
 
@@ -116,92 +107,20 @@
             <br>
 
             <input type="button"
-                   value="OK"
+                   value="Confirm"
                    onclick="login()">
 
             <input type="button"
-                   value="Cancel"
-                   onclick="location.href='page2.html'">
-
-        </div>
-
-
-        <div id="success">
-
-            <h2>You are successful!</h2>
-
-            <p id="message"></p>
-
-            <input type="button"
-                   value="OK"
-                   onclick="location.href='page2.html'">
-
-            <input type="button"
-                   value="Cancel"
-                   onclick="closeMessage()">
+                   value="Sign Up"
+                   onclick="location.href='signup.html'">
 
         </div>
 
 
     </article>
 
-
-    <script>
-
-        let type =
-            new URLSearchParams(location.search).get("type");
-
-
-        if (type == "new") {
-
-            document.getElementById("title").innerHTML =
-                "New Account";
-
-        }
-
-        else if (type == "owner") {
-
-            document.getElementById("title").innerHTML =
-                "Login as Owner";
-
-        }
-
-
-        function login() {
-
-            let name =
-                document.getElementById("name").value;
-
-            let password =
-                document.getElementById("password").value;
-
-
-            if (name == "" || password == "") {
-
-                alert("Please enter your name and password");
-
-                return;
-            }
-
-
-            document.getElementById("message").innerHTML =
-                "Welcome " + name + "!";
-
-
-            document.getElementById("success").style.display =
-                "block";
-
-        }
-
-
-        function closeMessage() {
-
-            document.getElementById("success").style.display =
-                "none";
-
-        }
-
-    </script>
+    
+    <script src="login.js"></script>
 
 </body>
 </html>
