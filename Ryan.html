@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reading with us</title>
+
+    <style>
+
+        h1 {
+            text-align: center;
+            flex-grow: 1;
+            background-color: burlywood;
+            color: aliceblue;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 8px 30px;
+            background-color: burlywood;
+        }
+
+        body {
+            background-image: url("book4.jpeg.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        input[type=button] {
+            width: auto;
+            background-color: darkcyan;
+            color: white;
+            padding: 6px 15px;
+            margin: 8px 5px;
+            border: 1px solid black;
+        }
+
+        .options {
+            background-color: rgba(255,255,255,0.85);
+            width: 60%;
+            margin: 80px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: darkcyan;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <article>
+
+        <header>
+
+            <h1>Reading with us</h1>
+
+            <input type="button" value="Home"
+                   onclick="location.href='page2.html'">
+
+            <input type="button" value="All books"
+                   onclick="location.href='page2.html'">
+
+            <input type="button" value="Admin"
+                   onclick="location.href='page2.html'">
+
+            <input type="button" value="Login"
+                   onclick="location.href='page2.html'">
+
+        </header>
+
+
+        <div class="options">
+
+            <h2>Choose an option</h2>
+
+                 <input type="button"
+                     value="New Account"
+                     onclick="location.href=''">
+
+
+                 <input type="button"
+                     value="Have an Account Already"
+                     onclick="location.href='Ryan2.html'">
+
+
+                 <input type="button"
+                     value="Login as Owner"
+                     onclick="location.href='page3.html?type=owner'">            
+
+
+        </div>
+
+    </article>
+
+</body>
+</html>

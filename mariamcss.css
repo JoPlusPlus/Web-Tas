@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f2ed;
+    color: #333;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: #5b4030;
+    color: white;
+
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-family: Georgia, serif;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Main container */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 50px auto;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 12px #ddd;
+}
+
+
+/* =================================
+   BOOK PICTURES
+   ================================= */
+
+.book-pictures {
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    width: 100%;
+
+    margin-bottom: 35px;
+}
+
+.book-pictures div {
+    width: 200px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+}
+
+.book-pictures img {
+    display: block;
+
+    width: 200px;
+    height: 290px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    box-shadow: 2px 3px 10px #aaa;
+}
+
+.book-pictures p {
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   BOOK INFORMATION
+   ================================= */
+
+.book-information {
+    width: 100%;
+}
+
+.book-information h1 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    color: #4b3426;
+
+    margin-bottom: 10px;
+}
+
+.book-information h3 {
+    color: #777;
+
+    font-weight: normal;
+
+    font-size: 17px;
+}
+
+hr {
+    margin: 25px auto;
+
+    width: 70%;
+
+    border: none;
+
+    border-top: 1px solid #ddd;
+}
+
+.book-information h2 {
+    font-family: Georgia, serif;
+
+    margin-bottom: 12px;
+
+    color: #4b3426;
+}
+
+.description {
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* =================================
+   COPIES AND PRICE
+   ================================= */
+
+.details {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border-top: 1px solid #ddd;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.details p {
+    margin: 10px;
+
+    font-size: 16px;
+
+    color: #555;
+}
+
+.details strong {
+    color: #4b3426;
+}
+
+.details span {
+    color: #5b4030;
+
+    font-weight: bold;
+
+    margin-left: 5px;
+}
+
+
+/* =================================
+   BUTTONS
+   ================================= */
+
+.buttons {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+button {
+    padding: 12px 30px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #5b4030;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f2c20;
+}
+
+.book-btn {
+    background-color: white;
+
+    color: #5b4030;
+
+    border: 1px solid #5b4030;
+}
+
+.book-btn:hover {
+    background-color: #5b4030;
+
+    color: white;
+}
+
+
+/* Message from JavaScript */
+
+#message {
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: #5b4030;
+}
+
+
+/* =================================
+   SMALL SCREENS
+   ================================= */
+
+@media (max-width: 550px) {
+
+    .container {
+        width: 95%;
+
+        padding: 20px;
+    }
+
+    .book-pictures {
+        gap: 10px;
+    }
+
+    .book-pictures div {
+        width: 145px;
+    }
+
+    .book-pictures img {
+        width: 145px;
+
+        height: 210px;
+    }
+
+    .book-information h1 {
+        font-size: 30px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

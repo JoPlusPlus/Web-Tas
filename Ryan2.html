@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reading with us</title>
+
+    <style>
+
+        h1 {
+            text-align: center;
+            flex-grow: 1;
+            background-color: burlywood;
+            color: aliceblue;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 8px 30px;
+            background-color: burlywood;
+        }
+
+        body {
+            background-image: url("book4.jpeg.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        input {
+            padding: 7px;
+            margin: 8px;
+        }
+
+        input[type=button] {
+            width: auto;
+            background-color: darkcyan;
+            color: white;
+            padding: 6px 15px;
+            margin: 8px 5px;
+            border: 1px solid black;
+        }
+
+        .login {
+            background-color: rgba(255,255,255,0.9);
+            width: 350px;
+            margin: 70px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        #success {
+            display: none;
+            background-color: white;
+            width: 350px;
+            margin: 20px auto;
+            padding: 25px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <article>
+
+        <header>
+
+            <h1>Reading with us</h1>
+
+            <input type="button" value="Home"
+                   onclick="location.href='page2.html'">
+
+            <input type="button" value="All books"
+                   onclick="location.href='page2.html'">
+
+            <input type="button" value="Admin"
+                   onclick="location.href='page2.html'">
+
+            <input type="button" value="Login"
+                   onclick="location.href='page2.html'">
+
+        </header>
+
+
+        <div class="login">
+
+            <h2 id="title">Login</h2>
+
+            <label>Name</label>
+
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name">
+
+
+            <label>Password</label>
+
+            <input type="password"
+                   id="password"
+                   placeholder="Enter your password">
+
+            <br>
+
+            <input type="button"
+                   value="OK"
+                   onclick="login()">
+
+            <input type="button"
+                   value="Cancel"
+                   onclick="location.href='page2.html'">
+
+        </div>
+
+
+        <div id="success">
+
+            <h2>You are successful!</h2>
+
+            <p id="message"></p>
+
+            <input type="button"
+                   value="OK"
+                   onclick="location.href='page2.html'">
+
+            <input type="button"
+                   value="Cancel"
+                   onclick="closeMessage()">
+
+        </div>
+
+
+    </article>
+
+
+    <script>
+
+        let type =
+            new URLSearchParams(location.search).get("type");
+
+
+        if (type == "new") {
+
+            document.getElementById("title").innerHTML =
+                "New Account";
+
+        }
+
+        else if (type == "owner") {
+
+            document.getElementById("title").innerHTML =
+                "Login as Owner";
+
+        }
+
+
+        function login() {
+
+            let name =
+                document.getElementById("name").value;
+
+            let password =
+                document.getElementById("password").value;
+
+
+            if (name == "" || password == "") {
+
+                alert("Please enter your name and password");
+
+                return;
+            }
+
+
+            document.getElementById("message").innerHTML =
+                "Welcome " + name + "!";
+
+
+            document.getElementById("success").style.display =
+                "block";
+
+        }
+
+
+        function closeMessage() {
+
+            document.getElementById("success").style.display =
+                "none";
+
+        }
+
+    </script>
+
+</body>
+</html>
