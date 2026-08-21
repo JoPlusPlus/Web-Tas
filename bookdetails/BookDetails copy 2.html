@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Details</title>
+
+    <link rel="stylesheet" href="mariamcss.css">
+</head>
+
+<body>
+    <article>
+    <header>
+        <nav>
+            <div class="siteName">Reading With Us</div>
+            <ul>
+                <li><a href="../Home.html">Home</a></li>
+                <li><a href="../Admin/Books.html">AllBooks</a></li>
+                <li><a href="../Admin/Admin.html">Admin</a></li>
+                <li><a href="../Login.html">Logout</a></li>
+                <li><button class="menu" onclick="toggle()">=</button></li>
+            </ul>
+            
+        </nav>
+        <div class="sidebar" id="mysidebar">
+            <button class="close-b" onclick="toggle()">x</button>
+            <h3> Contact us</h3>
+            <a href=" "><u>Facebook</u></a>
+            <a href=" "><u>Instgram</u></a>
+            <a href=" "><u>Telegram</u></a>
+        </div>
+    </header>
+</article>
+    <!-- Navigation Bar -->
+
+
+
+    <!-- Main Book Details -->
+    <div class="container">
+
+        <!-- Book Pictures -->
+        <div class="book-pictures">
+
+            <div style="float: left; margin-right: 50px;">
+                <img src="book2front.jpeg" style="width: 400px; height: 600px;">
+                <p>Front Cover</p>
+            </div>
+
+            <div>
+                <img src="book2back.jpeg" style="width: 400px; height: 600px;">
+                <p>Back Cover</p>
+            </div>
+
+        </div>
+
+
+        <!-- Book Information -->
+        <div class="book-information">
+
+            <h1> The Templeton Twins Have an Idea,</h1>
+
+            <h3>Written by Ellis Weiner</h3>
+
+            <hr>
+
+            <h2>About the Book</h2>
+
+            <p class="description">
+                The Templeton Twins series follows clever 12-year-old twins John and Abigail as they outsmart silly kidnappers trying to steal their father's inventions.
+            </p>
+
+
+            <!-- Available Copies and Price -->
+            <div class="details">
+
+                <p>
+                    <strong>Available Copies :</strong>
+                    <span id="copies">8</span>
+                </p>
+
+                <p>
+                    <strong>Price :</strong>
+                    <span>$25</span>
+                </p>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="buttons">
+
+                <button onclick="buyBook()">
+                    Buy Now
+                </button>
+
+                <button onclick="bookBook()" class="book-btn">
+                    Book Now
+                </button>
+
+            </div>
+
+            <!-- Message -->
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="mariamjs.JS"></script>
+
+</body>
+</html>
