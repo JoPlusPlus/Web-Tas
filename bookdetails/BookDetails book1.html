@@ -7,20 +7,34 @@
 
     <title>Book Details</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mariamcss.css">
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <h2>My Library</h2>
-
-        <div class="nav-links">
-            <a href="Home.html">Home</a> 
-            <a href="#">Books</a>
+    <article>
+    <header>
+        <nav>
+            <div class="siteName">Reading With Us</div>
+            <ul>
+                <li><a href="../Home.html">Home</a></li>
+                <li><a href="../Admin/Books.html">AllBooks</a></li>
+                <li><a href="../Admin/Admin.html">Admin</a></li>
+                <li><a href="../Login.html">Logout</a></li>
+                <li><button class="menu" onclick="toggle()">=</button></li>
+            </ul>
+            
+        </nav>
+        <div class="sidebar" id="mysidebar">
+            <button class="close-b" onclick="toggle()">x</button>
+            <h3> Contact us</h3>
+            <a href=" "><u>Facebook</u></a>
+            <a href=" "><u>Instgram</u></a>
+            <a href=" "><u>Telegram</u></a>
         </div>
-    </nav>
+    </header>
+</article>
+    <!-- Navigation Bar -->
+
 
 
     <!-- Main Book Details -->
@@ -30,12 +44,12 @@
         <div class="book-pictures">
 
             <div style="float: left; margin-right: 50px;">
-                <img src="front.jpeg" style="width: 600px; height: 900px;">
+                <img src="book1front.jpeg" style="width: 400px; height: 600px;">
                 <p>Front Cover</p>
             </div>
 
             <div>
-                <img src="back.jpeg" style="width: 600px; height: 900px;">
+                <img src="book1back.jpeg" style="width: 400px; height: 600px;">
                 <p>Back Cover</p>
             </div>
 
@@ -45,16 +59,16 @@
         <!-- Book Information -->
         <div class="book-information">
 
-            <h1> The Templeton Twins Have an Idea,</h1>
+            <h1> The pillars of the earth,</h1>
 
-            <h3>Written by Ellis Weiner</h3>
+            <h3>Written by ken follett</h3>
 
             <hr>
 
             <h2>About the Book</h2>
 
             <p class="description">
-                The Templeton Twins series follows clever 12-year-old twins John and Abigail as they outsmart silly kidnappers trying to steal their father's inventions.
+                The story centers on the ambitious, decades-long construction of a magnificent Gothic cathedral in the fictional town of Kingsbridge. Through this monumental project, the lives of a devoted prior (Philip), a visionary master builder (Tom Builder), an ingenious outcast (Jack), and a resilient noblewoman (Aliena) intertwine. Together, they battle ruthless rivals, corrupt clergy, and political intrigue to bring their masterpiece to life.
             </p>
 
 

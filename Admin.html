@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a Book</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f4f6f8;
+        }
+        nav {
+            background-color: #2c3e50;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        a{
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        form {
+            background: white;
+            width: 400px;
+            padding: 40px;
+            border: 1px solid #ddd;
+            border-radius: 14px;
+            box-shadow: 0 1px 5px rgba(0,0,0,.04);
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            height: 50px;
+            margin-top: 8px;
+            padding: 0 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 25px;
+            border: none;
+            background: #f4c400;
+            color: #222;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="siteName">Reading With Us</div>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Books.html">AllBooks</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <form>
+        <h1>New Book</h1>
+
+        <label>Title</label>
+        <input type="text" placeholder="Book title">
+
+        <label>Author</label>
+        <input type="text" placeholder="Author name">
+
+        <label>Genre</label>
+        <select>
+            <option>Fiction</option>
+            <option>Science</option>
+            <option>History</option>
+            <option>Fantasy</option>
+            <option>Romance</option>
+            <option>Biography</option>
+            <option>Technology</option>
+        </select>
+
+        <label>Availability</label>
+        <select>
+            <option>Available</option>
+            <option>Borrowed</option>
+        </select>
+
+        <button>Add Book</button>
+    </form>
+
+</body>
+</html>

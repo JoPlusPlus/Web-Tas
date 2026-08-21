@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a Book</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f4f6f8;
+        }
+        header {
+            background-color: #1a2b3c;
+            padding: 15px 40px;
+        }
+
+        .links{
+            display: inline;
+            margin-left: 60%;
+        }
+
+        header h1 {
+            color: white;
+            display: inline;
+            font-size: 24px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 6px 14px;
+            border-radius: 15px;
+            margin-left: 10px;
+        }
+
+        header a:hover {
+            background-color: white;
+            color: #1a2b3c;
+        }
+
+        form {
+            background: white;
+            width: 400px;
+            padding: 40px;
+            border: 1px solid #ddd;
+            border-radius: 14px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            margin-top: 27px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            height: 50px;
+            margin-top: 8px;
+            padding: 0 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 25px;
+            border: none;
+            background: #f4c400;
+            color: #222;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Reading with us</h1>
+        <div class="links">
+            <a href="../Home.html">Home</a>
+            <a href="Books.html">All books</a>
+            <a href="Admin.html">Admin</a>
+            <a href="../signup.html">Log out</a>
+        </div>
+    </header>
+
+    <form>
+        <h1>New Book</h1>
+
+        <label>Title</label>
+        <input type="text" id="title" placeholder="Book title">
+
+        <label>Author</label>
+        <input type="text" id="author" placeholder="Author name">
+
+
+        <label>Genre</label>
+        <select id="genre">
+            <option>Fiction</option>
+            <option>Science</option>
+            <option>History</option>
+            <option>Fantasy</option>
+            <option>Romance</option>
+            <option>Biography</option>
+            <option>Technology</option>
+        </select>
+
+        <label>Availability</label>
+        <select id="availability">
+            <option>Available</option>
+            <option>Borrowed</option>
+        </select>
+
+        <button type="button" onclick="addBook()">Add Book</button>
+    </form>
+
+    <script>
+        
+        
+        const pages = {
+            "Fiction": "Fiction.html",
+            "Science": "Science.html",
+            "History": "History.html",
+            "Fantasy": "Fantasy.html"
+        };
+
+        function addBook() {
+            const title = document.getElementById("title").value;
+            const author = document.getElementById("author").value;
+            const genre = document.getElementById("genre").value;
+            const availability = document.getElementById("availability").value;
+
+
+            if (title === "" || author === ""){
+                alert("You must enter book title and book author");
+                return;
+            }  
+
+            const targetPage = pages[genre] || "Books.html";
+
+            // pack the values into the URL, then jump to that page
+            location.href = targetPage
+                + "?title=" + encodeURIComponent(title)
+                + "&author=" + encodeURIComponent(author)
+                + "&availability=" + encodeURIComponent(availability);
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading with us - All</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef1f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a2b3c;
+    padding: 15px 40px;
+}
+
+.links{
+    display: inline;
+    margin-left: 60%;
+}
+
+header h1 {
+    color: white;
+    display: inline;
+    font-size: 24px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 6px 14px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+header a:hover {
+    background-color: white;
+    color: #1a2b3c;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container h2 {
+    color: #1a2b3c;
+    margin-bottom: 15px;
+}
+
+.filters {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.filters a {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.filters a:hover {
+    background-color: #e5e7eb;
+}
+
+.filters a.active {
+    background-color: #1a2b3c;
+    color: white;
+}
+
+.book-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+.book-image {
+    width: 100%;
+    height: 140px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.book-card h3 {
+    font-size: 18px;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.available {
+    background-color: #dcfce7;
+    color: #15803d;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 15px;
+}
+
+.borrowed {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 15px;
+}
+
+.book-card button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    background-color: #1a2b3c;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.book-card button:hover {
+    background-color: #0f1a26;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #6b7280;
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Reading with us</h1>
+        <div class="links">
+            <a href="../Home.html">Home</a>
+            <a href="Books.html">All books</a>
+            <a href="Admin.html">Admin</a>
+            <a href="../signup.html">Log out</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>All books</h2>
+
+        <div class="filters">
+            <a href="Books.html" class="active">All</a>
+            <a href="Fiction.html">Fiction</a>
+            <a href="Science.html">Science</a>
+            <a href="History.html">History</a>
+            <a href="Fantasy.html">Fantasy</a>
+        </div>
+
+        <div class="books-grid">
+            <div class="book-card">
+                <img class="book-image" src="../bookdetails/book1front.jpeg"></img>
+                <h3>The Pillars of the earth</h3>
+                <p>ken follett</p>
+                <span class="available">Available</span>
+                <button onclick="location.href = '../bookdetails/BookDetails book1.html' ">View Details</button>
+            </div>
+            <div class="book-card">
+                <img class="book-image" src="../bookdetails/book2front.jpeg"></img>
+                <h3>Game Of Thrones</h3>
+                <p>George R.R. Martin</p>
+                <span class="borrowed">Borrowed</span>
+                <button onclick="location.href = '../bookdetails/BookDetails copy 2.html' ">View Details</button>
+            </div>
+            <div class="book-card">
+                <img class="book-image" src="../bookdetails/book3front.jpeg"></img>
+                <h3>A Brief History of Time</h3>
+                <p>Stephen Hawking</p>
+                <span class="available">Available</span>
+                <button onclick="location.href = '../bookdetails/BookDetails copy 3.html' ">View Details</button>
+            </div>
+            <div class="book-card">
+                <img class="book-image" src="../bookdetails/book4front.jpeg"></img>
+                <h3>Three-Body Problem </h3>
+                <p>Cixin Liu</p>
+                <span class="available">Available</span>
+                <button onclick="location.href = '../bookdetails/BookDetails copy 4.html' ">View Details</button>
+            </div>
+            <div class="book-card">
+                <img class="book-image" src="../bookdetails/book5front.jpeg"></img>
+                <h3>The Silent Patient</h3>
+                <p>Alex Michaelides</p>
+                <span class="borrowed">Borrowed</span>
+                <button onclick="location.href = '../bookdetails/BookDetails copy 5.html' ">View Details</button>
+            </div>
+            <div class="book-card">
+                <img class="book-image" src="../bookdetails/harry.jpg"></img>
+                <h3>Harry Potter</h3>
+                <p>J.K. Rowling</p>
+                <span class="available">Available</span>
+                <button onclick="location.href = '../bookdetails/BookDetails copy 6.html' ">View Details</button>
+            </div>
+
+        <script>
+            // read the new book's info out of the URL (put there by Admin.html)
+            const params = new URLSearchParams(location.search);
+            const newTitle = params.get("title");
+
+            if (newTitle) {
+                const newAuthor = params.get("author");
+                const newAvailability = params.get("availability");
+                const statusClass = newAvailability === "Available" ? "available" : "borrowed";
+
+                document.write(`
+                    <div class="book-card">
+                        <img class="book-image" src="${newIMG}"></img>
+                        <h3>${newTitle}</h3>
+                        <p>${newAuthor}</p>
+                        <span class="${statusClass}">${newAvailability}</span>
+                        <button>View Details</button>
+                    </div>
+                `);
+                
+            }
+        </script>
+        </div>
+    </div>
+
+    <footer>Reading With Us</footer>
+
+</body>
+</html>
